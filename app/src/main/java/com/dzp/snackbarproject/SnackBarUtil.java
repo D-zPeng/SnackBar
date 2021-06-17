@@ -39,7 +39,8 @@ public class SnackBarUtil {
         Snackbar snackbar = null;
 //        获取SnackBar实例
         snackbar = Snackbar.make(view, "", duringTime);
-        snackbar.setDuration(3000);
+        // 设置显示时间，如果设置了这个则在Snackbar.make中设置的time则无效
+//        snackbar.setDuration(3000);
 //        设置snackbar的深度，避免被其他控件遮挡
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             snackbar.getView().setElevation(0);
